@@ -1,0 +1,57 @@
+# ===== 基础配置 =====
+baseURL = "https://example.com/"
+title = "May's Blog"
+theme = "PaperMod"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
+
+# ===== 分页 =====
+[pagination]
+  pagerSize = 20
+
+# ===== 站点参数 =====
+[params]
+  author = "May"
+  description = "May 的技术博客，记录后端工程、Flink、Kafka、面试题与项目实践。"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowSearch = true
+  mainSections = ["posts"]
+
+  # 首页个人信息
+  [params.homeInfoParams]
+    Title = "Hi, I'm May"
+    Content = "这里记录技术笔记、面试整理与项目实践，主要涉及后端工程、Flink、Kafka 等。"
+
+  # 社交图标
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/zhimingji"
+
+# ===== 顶部菜单 =====
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 30
+
+# ===== 输出格式（搜索需要 JSON）=====
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
