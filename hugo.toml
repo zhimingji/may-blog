@@ -1,8 +1,8 @@
 # ===== 基础配置 =====
 baseURL = "https://may-blog.pages.dev/"
-title = "May's Blog"
+title = "May 的博客"
 theme = "PaperMod"
-languageCode = "zh-cn"
+locale = "zh-cn"
 defaultContentLanguage = "zh"
 hasCJKLanguage = true
 
@@ -14,6 +14,7 @@ hasCJKLanguage = true
 [params]
   author = "May"
   description = "May 的博客。技术、学习、工作、日常，甭管什么，记点儿是点儿，省得回头全忘了。"
+  defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -24,12 +25,37 @@ hasCJKLanguage = true
   ShowSearch = true
   mainSections = ["posts"]
 
-  # 首页个人信息
+  # 文章封面图全局默认设置（frontmatter 里写 cover.image 才显示）
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  # 首页个人主页模式
+  [params.profileMode]
+    enabled = true
+    title = "May"
+    subtitle = "技术、学习、工作、日常，慢慢记，慢慢写。"
+    imageUrl = ""
+    imageTitle = ""
+    imageWidth = 120
+    imageHeight = 120
+
+    [[params.profileMode.buttons]]
+      name = "写的东西"
+      url = "/posts/"
+    [[params.profileMode.buttons]]
+      name = "标签"
+      url = "/tags/"
+    [[params.profileMode.buttons]]
+      name = "旧文"
+      url = "/archives/"
+
+  # 关掉 profileMode 时首页显示这段
   [params.homeInfoParams]
-    Title = "Hi,我是 May"
+    Title = "我是 May"
     Content = "这里没什么大道理，就是记点技术、工作和日子里的事。想到什么写什么，慢慢来。"
 
-  # 社交图标
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/zhimingji"
@@ -38,7 +64,7 @@ hasCJKLanguage = true
 [menu]
   [[menu.main]]
     identifier = "posts"
-    name = "文章"
+    name = "写的东西"
     url = "/posts/"
     weight = 10
   [[menu.main]]
@@ -48,7 +74,7 @@ hasCJKLanguage = true
     weight = 20
   [[menu.main]]
     identifier = "archives"
-    name = "归档"
+    name = "旧文"
     url = "/archives/"
     weight = 30
 
