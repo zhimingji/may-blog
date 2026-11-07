@@ -26,7 +26,7 @@ hasCJKLanguage = true
 
   # 首页个人信息
   [params.homeInfoParams]
-    Title = "我是 May"
+    Title = "Hi,我是 May"
     Content = "这里没什么大道理，就是记点技术、工作和日子里的事。想到什么写什么，慢慢来。"
 
   # 社交图标
