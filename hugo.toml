@@ -1,5 +1,5 @@
 # ===== 基础配置 =====
-baseURL = "https://example.com/"
+baseURL = "https://may-blog.pages.dev/"
 title = "May's Blog"
 theme = "PaperMod"
 languageCode = "zh-cn"
@@ -13,7 +13,7 @@ hasCJKLanguage = true
 # ===== 站点参数 =====
 [params]
   author = "May"
-  description = "May 的技术博客，记录后端工程、Flink、Kafka、面试题与项目实践。"
+  description = "May 的博客。技术、学习、工作、日常，甭管什么，记点儿是点儿，省得回头全忘了。"
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -26,8 +26,8 @@ hasCJKLanguage = true
 
   # 首页个人信息
   [params.homeInfoParams]
-    Title = "Hi, I'm May"
-    Content = "这里记录技术笔记、面试整理与项目实践，主要涉及后端工程、Flink、Kafka 等。"
+    Title = "我是 May"
+    Content = "这里没什么大道理，就是记点技术、工作和日子里的事。想到什么写什么，慢慢来。"
 
   # 社交图标
   [[params.socialIcons]]
