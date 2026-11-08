@@ -1,0 +1,51 @@
+/* ===== 首页背景图 ===== */
+body.home {
+  background-image: url("/img/space-earth.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* 首页个人简介区加半透明遮罩，保证文字可读 */
+body.home .profile {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin-top: 3rem;
+}
+
+/* 首页文章列表区域加浅遮罩 */
+body.home main {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ===== 暗色模式 ===== */
+body.home.dark {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/img/space-earth.jpg");
+}
+
+body.home.dark .profile {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+body.home.dark main {
+  background: rgba(20, 20, 22, 0.8);
+}
+
+/* ===== 移动端 ===== */
+@media (max-width: 768px) {
+  body.home {
+    background-attachment: scroll;
+  }
+  body.home .profile {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
