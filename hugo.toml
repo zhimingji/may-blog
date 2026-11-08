@@ -23,21 +23,51 @@ hasCJKLanguage = true
   mainSections = ["posts"]
   description = "May 的博客。技术、学习、工作、日常，甭管什么，记点儿是点儿，省得回头全忘了。"
 
+  # ===== 首页个人主页布局 =====
+  [params.homepage]
+    layout = "profile"
+
+  [params.profile]
+    enabled = true
+    name = "May"
+    bio = "技术、学习、工作、日常，慢慢记，慢慢写。"
+    avatar = "img/avatar.png"
+    avatarUrl = ""
+    showInHeader = true
+    showInFooter = true
+
+    [[params.profile.social]]
+      name = "GitHub"
+      url = "https://github.com/zhimingji"
+      icon = "github"
+
+  # ===== 头部 =====
   [params.header]
-    layout = "basic"
+    layout = "fixed"
+    showLogo = true
 
-  [params.footer]
-    showCopyright = true
-
+  # ===== 文章页 =====
   [params.article]
     showReadingTime = true
     showTableOfContents = true
     showTaxonomies = true
     showWordCount = true
+    showDate = true
+    showAuthor = false
+    showBreadcrumbs = true
+    sharingLinks = ["github", "x", "weibo"]
 
+  # ===== 列表页 =====
   [params.list]
     showTags = true
+    showReadingTime = true
     groupByYear = false
+    cardView = true
+
+  # ===== 页脚 =====
+  [params.footer]
+    showCopyright = true
+    showThemeAttribution = true
 
 [menu]
   [[menu.main]]
