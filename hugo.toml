@@ -1,83 +1,54 @@
-# ===== 基础配置 =====
 baseURL = "https://may-blog.pages.dev/"
 title = "May 的博客"
-theme = "PaperMod"
-locale = "zh-cn"
-defaultContentLanguage = "zh"
+theme = "blowfish"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 
-# ===== 分页 =====
 [pagination]
-  pagerSize = 20
+  pagerSize = 10
 
-# ===== 站点参数 =====
-[params]
-  author = "May"
-  description = "May 的博客。技术、学习、工作、日常，甭管什么，记点儿是点儿，省得回头全忘了。"
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowToc = true
-  TocOpen = false
-  ShowSearch = true
-  mainSections = ["posts"]
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
-  # 文章封面图全局默认设置（frontmatter 里写 cover.image 才显示）
-  [params.cover]
-    hidden = false
-    hiddenInList = false
-    hiddenInSingle = false
-
-  # 首页个人主页模式
-  [params.profileMode]
-    enabled = true
-    title = "May"
-    subtitle = "技术、学习、工作、日常，慢慢记，慢慢写。"
-    imageUrl = ""
-    imageTitle = ""
-    imageWidth = 120
-    imageHeight = 120
-
-    [[params.profileMode.buttons]]
-      name = "写的东西"
-      url = "/posts/"
-    [[params.profileMode.buttons]]
-      name = "标签"
-      url = "/tags/"
-    [[params.profileMode.buttons]]
-      name = "旧文"
-      url = "/archives/"
-
-  # 关掉 profileMode 时首页显示这段
-  [params.homeInfoParams]
-    Title = "我是 May"
-    Content = "这里没什么大道理，就是记点技术、工作和日子里的事。想到什么写什么，慢慢来。"
-
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/zhimingji"
-
-# ===== 顶部菜单 =====
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "写的东西"
-    url = "/posts/"
-    weight = 10
-  [[menu.main]]
-    identifier = "tags"
-    name = "标签"
-    url = "/tags/"
-    weight = 20
-  [[menu.main]]
-    identifier = "archives"
-    name = "旧文"
-    url = "/archives/"
-    weight = 30
-
-# ===== 输出格式（搜索需要 JSON）=====
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[params]
+  colorScheme = "blowfish"
+  defaultAppearance = "auto"
+  autoSwitchAppearance = true
+  enableSearch = true
+  mainSections = ["posts"]
+  description = "May 的博客。技术、学习、工作、日常，甭管什么，记点儿是点儿，省得回头全忘了。"
+
+  [params.header]
+    layout = "basic"
+
+  [params.footer]
+    showCopyright = true
+
+  [params.article]
+    showReadingTime = true
+    showTableOfContents = true
+    showTaxonomies = true
+    showWordCount = true
+
+  [params.list]
+    showTags = true
+    groupByYear = false
+
+[menu]
+  [[menu.main]]
+    name = "写的东西"
+    pageRef = "/posts"
+    weight = 10
+  [[menu.main]]
+    name = "标签"
+    pageRef = "/tags"
+    weight = 20
+  [[menu.main]]
+    name = "关于"
+    pageRef = "/about"
+    weight = 30
