@@ -1,3 +1,5 @@
 [homepage]
   layout = "background"
   homepageImage = "img/space-earth.jpg"
+  backgroundImageWidth = 1920
+  disableImageOptimization = true 
