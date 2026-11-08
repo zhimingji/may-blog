@@ -3,3 +3,5 @@
   homepageImage = "img/space-earth.jpg"
   backgroundImageWidth = 1920
   disableImageOptimization = true 
+  layoutBackgroundBlur = false
+ 
